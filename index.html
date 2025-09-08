@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steal a Brainrot - Play Free Online Game | stealbrainrot.app</title>
+    <meta name="description" content="Play Steal a Brainrot online for free! Challenge your friends in this addictive brain-twisting game. No download required, play instantly in your browser.">
+    <meta name="keywords" content="steal a brainrot, online game, free game, browser game, puzzle game, brain game">
+    <meta name="author" content="stealbrainrot.app">
+    <link rel="canonical" href="https://stealbrainrot.app/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Steal a Brainrot - Play Free Online Game">
+    <meta property="og:description" content="Challenge your mind with Steal a Brainrot! Play this addictive online game for free in your browser.">
+    <meta property="og:url" content="https://stealbrainrot.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steal a Brainrot">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Steal a Brainrot - Play Free Online Game">
+    <meta name="twitter:description" content="Challenge your mind with Steal a Brainrot! Play this addictive online game for free in your browser.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #007aff;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin: 60px 0 20px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #6e6e73;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .game-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin: 50px 0 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 30px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 3px;
+        }
+        
+        .content-section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #424245;
+            margin-bottom: 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+        
+        .feature-description {
+            color: #6e6e73;
+            font-size: 1rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 20px;
+            padding: 60px 30px;
+            margin: 60px 0;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .play-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .play-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            background: #1d1d1f;
+            color: #f5f5f7;
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #f5f5f7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #007aff;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                margin: 40px 0 15px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                margin: 30px 0 20px;
+            }
+            
+            .game-iframe {
+                height: 400px;
+            }
+            
+            .game-container {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+            
+            .content-section {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-description {
+                font-size: 1.1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .game-iframe {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Steal a Brainrot</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#game">Play Now</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Steal a Brainrot</h1>
+        <p class="subtitle">Challenge your mind with the most addictive brain-twisting game that will test your wit and strategy!</p>
+
+        <div class="game-container" id="game">
+            <iframe 
+                src="https://games.crazygames.com/en_US/steal-brainrot-online/index.html" 
+                class="game-iframe"
+                title="Steal a Brainrot Online Game"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <section class="content-section" id="about">
+            <h2>About Steal a Brainrot</h2>
+            <p>Welcome to Steal a Brainrot, the ultimate brain-teasing adventure that will challenge your cognitive abilities and strategic thinking. This innovative online game combines puzzle-solving elements with competitive gameplay, creating an experience that's both mentally stimulating and incredibly entertaining.</p>
+            
+            <p>In Steal a Brainrot, players must navigate through complex scenarios using wit, strategy, and quick thinking. The game features intuitive controls that are easy to learn but difficult to master, making it accessible for beginners while providing depth for experienced gamers.</p>
+            
+            <p>Whether you're looking for a quick mental workout during your break or an engaging gaming session, Steal a Brainrot delivers the perfect balance of challenge and fun. The game runs smoothly in any modern web browser, requiring no downloads or installations.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Mind-Bending Puzzles</h3>
+                    <p class="feature-description">Challenge yourself with increasingly complex puzzles that test your problem-solving abilities and creative thinking.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Play</h3>
+                    <p class="feature-description">Jump right into the action with no downloads required. Play directly in your browser on any device.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Intuitive Controls</h3>
+                    <p class="feature-description">Easy-to-learn controls that work perfectly on both desktop and mobile devices for seamless gameplay.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Competitive Elements</h3>
+                    <p class="feature-description">Test your skills against other players and see how you rank in this mentally stimulating competition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>How to Play</h2>
+            <p>Getting started with Steal a Brainrot is simple and straightforward. The game begins with a brief tutorial that introduces you to the basic mechanics and objectives. As you progress through different levels, you'll encounter new challenges that require different strategies and approaches.</p>
+            
+            <p>The core gameplay revolves around strategic decision-making and quick reflexes. Players must analyze each situation carefully, considering multiple variables before making their move. The game rewards both speed and accuracy, encouraging players to find the optimal balance between these elements.</p>
+            
+            <p>Success in Steal a Brainrot comes from understanding the game's mechanics, learning from each attempt, and developing your own unique strategies. The more you play, the better you'll become at recognizing patterns and anticipating challenges.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Choose Steal a Brainrot?</h2>
+            <p>Steal a Brainrot stands out in the crowded field of online games by offering a unique blend of entertainment and mental exercise. Unlike many casual games that rely solely on luck or reflexes, this game challenges players to think critically and develop strategic approaches to overcome obstacles.</p>
+            
+            <p>The game is designed to be highly accessible, working perfectly across all devices and browsers without requiring any special software or high-end hardware. This means you can enjoy the full gaming experience whether you're on a desktop computer, tablet, or smartphone.</p>
+            
+            <p>Regular updates ensure that the game remains fresh and engaging, with new challenges and features being added to keep the experience exciting for long-term players. The development team is committed to maintaining a high-quality gaming experience that continues to evolve and improve over time.</p>
+        </section>
+
+        <div class="cta-section">
+            <h2 class="cta-title">Ready to Test Your Mind?</h2>
+            <p class="cta-description">Join thousands of players who have already discovered the addictive challenge of Steal a Brainrot!</p>
+            <a href="#game" class="play-button">Play Now - It's Free!</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#game">Play Game</a>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+                <p>&copy; 2025 stealbrainrot.app. All rights reserved. Play Steal a Brainrot online for free!</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
